@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shade1"
+    android:padding="16dp">
+
+    <!-- Title Section -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Guardian"
+        android:textSize="24sp"
+        android:drawablePadding="8dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        app:drawableLeftCompat="@drawable/ic_baseline_local_hospital_24"
+        app:drawableRightCompat="@drawable/ic_baseline_local_hospital_24" />
+
+    <!-- Guardian Information Section -->
+    <LinearLayout
+        android:id="@+id/guardianInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="71dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Individual Guardian Information Fields with Increased Spacing -->
+        <TextView
+            android:id="@+id/firstNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="John"
+            android:drawablePadding="8dp"
+            app:drawableLeftCompat="@drawable/ic_name"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lastNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:drawablePadding="8dp"
+            app:drawableLeftCompat="@drawable/ic_name"
+            android:layout_marginBottom="30dp"
+            android:text="Doe"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/genderTextView"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="Male"
+            android:drawablePadding="8dp"
+            app:drawableLeftCompat="@drawable/ic_gender"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/ageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:drawablePadding="8dp"
+            app:drawableLeftCompat="@drawable/ic_age"
+            android:layout_marginBottom="30dp"
+            android:text="30 Yrs"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/phoneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            app:drawableLeftCompat="@drawable/ic_baseline_local_phone_24"
+            android:layout_marginBottom="30dp"
+            android:text="+1 234567890"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/bloodGroupTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            app:drawableLeftCompat="@drawable/ic_baseline_bloodtype_24"
+            android:layout_marginBottom="30dp"
+            android:text="A+"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SymptomsButton"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shade1"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/symptomsButton"
+        android:layout_width="117dp"
+        android:layout_height="124dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="184dp"
+        android:background="@drawable/gradient_round_button"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="launchSymptomsActivity"
+        android:text="Symptoms"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/UploadSignsButton"
+        android:layout_width="118dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="184dp"
+        android:background="@drawable/gradient_round_button"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="onClickUploadSignsButton"
+        android:text="Upload Signs"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/symptomsButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/respiratoryRateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="20dp"
+        android:text="00"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/respiratoryRateButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/heartRateButton"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="180dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="37dp"
+        android:text="Measure Heart Rate"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_baseline_monitor_heart_24"
+        app:layout_constraintBottom_toTopOf="@+id/UploadSignsButton"
+        app:layout_constraintEnd_toStartOf="@+id/respiratoryRateButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/heartRateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="20dp"
+        android:text="00"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/heartRateButton"
+        app:layout_constraintEnd_toStartOf="@+id/respiratoryRateTextView"
+        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/respiratoryRateButton"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="180dp"
+        android:layout_height="77dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="36dp"
+        android:onClick="onClickMeasureRespiratoryRateButton"
+        android:text="Measure Respiratory Rate"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_respiratory_rate_icon"
+        app:layout_constraintBottom_toTopOf="@+id/symptomsButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewVideo"
+        android:layout_width="169dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="54dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/respiratoryRateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/goOutButton"
+        android:layout_width="120dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="76dp"
+        android:onClick="launchWeatherActivity"
+        android:text="Wanna Go Out...!!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/myGuardianButton"
+        android:layout_width="173dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="76dp"
+        android:onClick="getMyGuardian"
+        android:text="Who's my Guardian?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

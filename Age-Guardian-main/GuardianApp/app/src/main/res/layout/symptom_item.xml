@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#2B2B2B">
+
+    <TextView
+        android:id="@+id/symptomName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Symptom Name"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"/>
+
+    <View
+        android:id="@+id/symptomSeverityScale"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/scale_background"
+        android:layout_marginTop="8dp"/>
+
+    <View
+        android:id="@+id/symptomSeverityMarker"
+        android:layout_width="4dp"
+        android:layout_height="12dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="-8dp"
+        android:layout_marginStart="@dimen/marker_start_margin"/>
+</LinearLayout>

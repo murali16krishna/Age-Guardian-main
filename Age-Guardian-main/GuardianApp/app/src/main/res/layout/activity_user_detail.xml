@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shade1"
+    tools:context=".UserDetailActivity">
+
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        android:textColor="@color/teal_700"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:textSize="28sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Notification Message -->
+    <TextView
+        android:id="@+id/notificationMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="You'll be notified for any abnormalities in User's Health"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- HeartRate Button -->
+    <Button
+        android:id="@+id/buttonHeartRate"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heart Rate"
+        app:icon="@drawable/ic_baseline_monitor_heart_24"
+        app:layout_constraintTop_toBottomOf="@+id/notificationMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Heart Rate Value Display -->
+    <TextView
+        android:id="@+id/heartRateValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textColor="@color/MainPageButtonColor"
+        app:layout_constraintTop_toBottomOf="@id/buttonHeartRate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp" />
+
+    <!-- RespiratoryRate Button -->
+    <Button
+        android:id="@+id/buttonRespiratoryRate"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Respiratory Rate"
+        app:icon="@drawable/ic_respiratory_rate_icon"
+        app:layout_constraintTop_toBottomOf="@id/heartRateValue"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp" />
+
+    <!-- Respiratory Rate Value Display -->
+    <TextView
+        android:id="@+id/respiratoryRateValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textColor="@color/MainPageButtonColor"
+        app:layout_constraintTop_toBottomOf="@id/buttonRespiratoryRate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp" />
+
+    <!-- Locate Button -->
+
+    <!-- View Symptoms Button -->
+    <Button
+        android:id="@+id/buttonLocate"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="52dp"
+        android:text="LOCATE"
+        app:icon="@drawable/ic_baseline_my_location_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/respiratoryRateValue" />
+
+    <Button
+        android:id="@+id/buttonViewSymptoms"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIEW SYMPTOMS"
+        android:layout_marginStart="16dp"
+        app:icon="@drawable/ic_baseline_healing_24"
+        app:layout_constraintTop_toBottomOf="@id/buttonLocate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

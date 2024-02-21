@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shade1"
+    tools:context=".SymptomsDisplayActivity">
+
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/userNameSymptoms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        android:textSize="28sp"
+        android:textColor="@color/teal_700"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Symptoms Header -->
+    <TextView
+        android:id="@+id/symptomsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SYMPTOMS"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/MainPageButtonColor"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        app:layout_constraintTop_toBottomOf="@id/userNameSymptoms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <ScrollView
+        android:id="@+id/scrollViewSymptoms"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/"
+        android:textColor="@color/MainPageButtonColor"
+        app:layout_constraintTop_toBottomOf="@id/symptomsHeader"
+        app:layout_constraintBottom_toTopOf="@id/symptomsDateInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/symptomsRecyclerView"
+            android:layout_width="match_parent"
+            android:textColor="@color/MainPageButtonColor"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/symptomsDateInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="@font/pacifio"
+        android:textColor="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
